@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <title>Exile Race</title>
+        <style>
+            body {
+                background-color: rgba(255, 255, 255, 0);
+                font-family: 'Open Sans', sans-serif;
+            }
+
+            .main {
+                margin: auto;
+                width: 60%;
+                border-radius: 10px;
+                padding: 0 0 30px 0;
+                margin-top: 100px;
+                height: 550px;
+                background-color: rgba(0, 0, 0, 0.616);
+                text-align: center;
+                display: none;
+            }
+
+            .header {
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                background-color: rgba(0, 0, 0, 0.74);
+            }
+
+            .header h1 {
+                padding: 10px;
+                background: -webkit-linear-gradient(90deg, #3fcaff, #a4ffb0);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .content {
+                height: 78%;
+            }
+
+            .footer {
+                height: 50px;
+                margin-bottom: 0px;
+            }
+
+            .btn {
+                border: 2px solid black;
+                border-radius: 5px;
+                background-color: rgba(0, 0, 0, 0.548);
+                color: black;
+                padding: 4px 98px;
+                font-size: 16px;
+                cursor: pointer;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 400;
+            }
+
+            .close {
+                border-color: #f3212c;
+                color: #f3212c
+            }
+
+            .close:hover {
+                background: #f3212c;
+                color: white;
+            }
+
+            .list {
+                border-image: linear-gradient(to right, #11998e, #38ef7d);
+                border-image-slice: 1;
+                color: #e7fffd;
+                height: 50px;
+                margin-top: 20px;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            .list:hover {
+                background: linear-gradient(to right, #11998e, #38ef7d);
+                color: rgb(0, 0, 0);
+            }
+
+            .name {
+                color: #ffffff;
+                font-size: 35px;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500;
+            }
+
+            .show {display: block;}
+
+            .modal {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                padding-top: 150px; /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            }
+
+            /* Modal Content */
+            .modal-content {
+                background-color: #000000d0;
+                border-radius: 5px;
+                margin: auto;
+                padding: 20px;
+                color: #fff;
+                width: 40%;
+                border: 1px solid #ffffff62;
+            }
+
+            /* The Close Button */
+            .close2 {
+                color: #aaaaaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .close2:hover,
+            .close2:focus {
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            .form__group {
+                position: relative;
+                padding: 15px 0 0;
+                margin-top: 10px;
+                margin-left: 60px;
+                width: 80%;
+            }
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.form__field::placeholder {
+  color: transparent;
+}
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #11998e;
+  font-weight: 700;
+}
+
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
+
+#mainButtons {
+    display: block;
+}
+
+#saveButtonDiv {
+    display: none;
+}
+        </style>
+    </head>
+    <body>
+        <div id="main" class="main">
+            <div class="header">
+                <p style="float: left;"><img src="https://www.exilerp.eu/img/logo.png" style="position: fixed; margin-left: 10px; transform: translateY(-5px);" height="40px" width="40px"></p>
+                <h1>Exile Race</h1>
+            </div>
+            <div class="content">
+                <p class="name">Wyścigi Uliczne</span></p>
+                <div id="mainButtons">
+                    <button id="raceListBtn" class="btn list">Wczytaj wyścig</button>
+                    <button id="createRace" class="btn list">Stwórz nowy</button><br>
+                    <button id="startRace" class="btn list" style="width: 630px">Zacznij wyścig</button>
+                </div>
+                <div id="saveButtonDiv">
+                    <button id="saveActualRace" class="btn list" style="width: 630px">Zapisz zaznaczony wyścig</button>
+                </div>
+                <div id="myModal" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span class="close2">&times;</span>
+     
+                      <div class="form__group field">
+                        <input type="input" class="form__field" placeholder="Name" name="name" id='nameOfRace' required />
+                        <label for="name" class="form__label">Tytuł wyścigu</label>
+                      </div>
+
+                      <br><br><br><br><br>
+                      <button id="saveActualRaceAction" class="btn list">Zapisz wyścig</button>
+                    </div>
+                  
+                </div>
+
+                <div id="myModal2" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span class="close2">&times;</span>
+     
+                      <div class="form__group field">
+                        <input type="input" class="form__field" placeholder="Name" name="name" id='kwotka' required />
+                        <label for="name" class="form__label">Kwota przystąpienia</label>
+                      </div>
+
+                      <div class="form__group field">
+                        <input type="input" class="form__field" placeholder="Name" name="name" id='czasD' required />
+                        <label for="name" class="form__label">Czas do startu (opcjonalnie)</label>
+                      </div>
+                      
+                      <br><br><br><br><br>
+                      <button id="startActualRace" class="btn list">Wystartuj wyścig</button>
+                    </div>
+                  
+                </div>
+                
+            </div>
+            <div class="footer">
+                <button class="btn close" id="closeBtn">Zamknij</button>
+            </div>
+        </div>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+
+            var modal = document.getElementById("myModal");
+
+            var modal2 = document.getElementById("myModal2");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("saveActualRace");
+
+            var btn2 = document.getElementById("startRace");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close2")[0];
+
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
+
+            btn2.onclick = function() {
+                modal2.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+                modal2.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                    modal2.style.display = "none";
+                }
+            }
+
+    		$(function() {
+				window.addEventListener('message', function(event) {
+					if (event.data.type === "openGeneral"){
+		                $('#main').show();
+					} else if(event.data.type === "setData") {
+						$('#ustawName').html(event.data.name);
+					} else if (event.data.type === "closeAll"){
+		                $('#main').hide();
+					}
+				});
+			});
+            $('#raceListBtn').click(function(){
+                $('#main').hide();
+		        $.post('http://qStreetRaces/loadRaces', JSON.stringify({}));
+	        })
+            $('#createRace').click(function(){
+                $('#main').hide();
+                $('#mainButtons').hide();
+                $('#saveButtonDiv').show();
+		        $.post('http://qStreetRaces/createRace', JSON.stringify({}));
+	        })
+            $('#closeBtn').click(function(){
+                $('#main').hide();
+		        $.post('http://qStreetRaces/NUIFocusOff', JSON.stringify({}));
+	        })
+            $('#saveActualRaceAction').click(function(){
+                $('#main').hide();
+		        $.post('http://qStreetRaces/saveRace', JSON.stringify({
+					name: $("#nameOfRace").val()
+		        }));
+
+				$("#nameOfRace").val('');
+                modal.style.display = "none";
+                modal2.style.display = "none";
+                $('#mainButtons').show();
+                $('#saveButtonDiv').hide();
+	        })
+            $('#startActualRace').click(function(){
+                $('#main').hide();
+		        $.post('http://qStreetRaces/startRace', JSON.stringify({
+					kwota: $("#kwotka").val(),
+                    czas: $('#czasD').val()
+		        }));
+
+				$("#kwotka").val('');
+                $("#czasD").val('');
+                modal.style.display = "none";
+                modal2.style.display = "none";
+                $('#mainButtons').show();
+                $('#saveButtonDiv').hide();
+	        })
+			document.onkeyup = function(data){
+		        if (data.which == 27){
+                    $('#main').hide();
+		            $.post('http://qStreetRaces/NUIFocusOff', JSON.stringify({}));
+		        }
+		    }
+        </script>
+    </body>
+</html>

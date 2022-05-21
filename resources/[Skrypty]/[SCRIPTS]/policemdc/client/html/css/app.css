@@ -1,0 +1,337 @@
+@import url(https://fonts.googleapis.com/css?family=Saira&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Spectral&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+.police-text {
+  color: #f3f3f3;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+@media (max-width: 1281px) {
+  .police-text {
+    color: #f3f3f3;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9em;
+    font-weight: 700;
+  }
+}
+
+.police-text-small {
+  font-size: 1em;
+  font-family: 'Poppins', sans-serif;
+  padding-left: 0.2rem;
+}
+
+.police-button {
+  background-color: rgb(26,26,26) !important;
+  color: #f3f3f3 !important;
+}
+
+.police-button:hover {
+  background-color: rgb(50, 50, 50) !important;
+  color: #f3f3f3 !important;
+}
+
+.notes-container {
+  background-color: rgba(28, 28, 28, 0.95);
+  max-height: 50vh;
+  -webkit-box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+
+.citizen-info-tab .card-header {
+  background-color: rgba(16, 16, 16, 0.95);
+  padding: 0.5rem 1rem;
+}
+
+.citizen-info-tab .card-header .nav-link {
+  color: #f3f3f3;
+}
+
+.citizen-info-tab .card-header .nav-link.active {
+  color: #f3f3f3;
+  background-color: rgba(19, 19, 19, 0.95);
+}
+
+.citizen-info-tab .tab-content .card-body {
+  padding: 0;
+}
+
+.citizen-table-display {
+  background-color: rgba(19, 19, 19, 0.95);
+  max-height: 50vh;
+  -webkit-box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+
+.table-blue-background {
+  border-radius: 4px;
+  background-color: rgba(19, 19, 19, 0.95);
+}
+
+.citizen-table-display tr {
+  color: #f3f3f3;
+}
+
+.police-link {
+  position: relative;
+  color: #f3f3f3;
+  z-index: 1;
+}
+
+.police-link:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 2px solid rgba(19, 19, 19, 0.95);
+  margin-top: 10px;
+  opacity: 1;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+}
+
+.police-link:hover:after {
+  color: rgba(26,26,26,0.95);
+  opacity: 0;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+}
+
+.warrants-table-container {
+  background-color: rgba(19, 19, 19, 0.95);
+  -webkit-box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+}
+
+.warrants-table {
+  max-height: 20vh;
+  background-color: rgba(19, 19, 19, 0.95);
+}
+
+.warrants-table-container tr {
+  color: #f3f3f3;
+}
+
+.warrants-table .warrants-header {
+  background-color: rgba(19, 19, 19, 0.95) !important;
+  color: #f3f3f3;
+}
+
+.warrant-image {
+  max-width: 10vh;
+}
+
+::-webkit-scrollbar {
+  height: 0.3em;
+  width: 0.3em;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px #21233f;
+  box-shadow: inset 0 0 6px #21233f;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(10, 10, 10, 0.95);
+  border-radius: 6px;
+}
+
+:focus {
+  outline: none !important;
+}
+
+body,
+html {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+#app {
+  width: 100%;
+  height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.footer[data-v-3b029c4e] {
+  min-height: 2vh;
+}
+
+.footer .line[data-v-3b029c4e] {
+  height: 2vh;
+  background-color: rgb(12, 122, 245);
+}
+
+.logo-container[data-v-3ad6392d] {
+  position: relative;
+  display: block;
+  z-index: 10;
+}
+
+.logo-container .police-logo[data-v-3ad6392d] {
+  max-width: 12vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -10%);
+  transform: translate(-50%, -10%);
+}
+
+.state-text[data-v-3ad6392d] {
+  font-size: 1.6rem;
+  margin: 0.2rem;
+}
+
+@media (max-width: 1281px) {
+  .state-text[data-v-3ad6392d] {
+    font-size: 1.0rem;
+    margin: 0.2rem;
+  }
+}
+
+.drop-button[data-v-308d977f] {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #f3f3f3;
+}
+
+.dropdown[data-v-308d977f] {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content[data-v-308d977f] {
+  display: none;
+  position: absolute;
+  background-color: rgba(26,26,26, 0.95);
+  border-radius: 4px;
+  z-index: 1;
+  min-width: 12vh;
+  max-width: 20vh;
+}
+
+.dropdown-content a[data-v-308d977f] {
+  color: #f3f3f3;
+  text-decoration: none;
+  display: block;
+  word-wrap: break-word;
+}
+
+.dropdown-content a[data-v-308d977f]:hover {
+  background-color: rgba(50,50,50, 0.95);
+  color: #f3f3f3;
+}
+
+.dropdown:hover .dropdown-content[data-v-308d977f] {
+  display: block;
+}
+
+.dropdown:hover .drop-button[data-v-308d977f] {
+  background-color: rgba(26,26,26, 0.95);
+  border-radius: 6px;
+  color: #f3f3f3;
+}
+
+#police-mdc[data-v-308d977f] {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.police-mdc-container[data-v-308d977f] {
+  width: 80%;
+  position: relative;
+  background-color: rgba(19, 19, 19, 0.95);
+  color: #f3f3f3;
+  overflow: hidden;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 0 15px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 15px 8px rgba(0, 0, 0, 0.25);
+}
+
+.police-mdc-navbar[data-v-308d977f] {
+  background-color: rgb(12, 122, 245);
+  color: #f3f3f3;
+  font-family: 'Poppins', sans-serif;
+}
+
+.police-mdc-page-content[data-v-308d977f] {
+  overflow: auto;
+  height: 100%;
+  padding: 12px 6px 6px 6px;
+  font-size: 1.2rem;
+  color: #fff;
+  height: 75vh;
+}
+
+.new-conviction-container .conviction-category {
+  padding-top: 0.8rem;
+  padding-bottom: 1rem;
+  border: 1px solid #f3f3f3;
+  color: #00ca1b;
+}
+
+.conviction-item .card-header {
+  padding: 0.25rem 0.3rem;
+  font-size: 0.9rem;
+}
+
+.conviction-item .conviction-item-description {
+  font-size: 0.75rem;
+}
+
+.conviction-item .card-body {
+  padding: 0.2rem;
+}
+
+.conviction-item:hover {
+  cursor: pointer;
+  background-color: rgba(19, 19, 19, 0.95) !important;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.convictions-summary-table {
+  font-size: 1rem;
+  background-color: rgba(19, 19, 19, 0.95);
+  max-height: 25vh;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.convictions-summary-table tr {
+  color: #f3f3f3;
+}
+
+.convictions-summary-table-header {
+  background-color: rgb(12, 122, 245);
+  color: #f3f3f3;
+}
+
+.convictions-summary-table-header tr {
+  color: #f3f3f3;
+}

@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body,
+html {
+  overflow-y: hidden;
+}
+/* main.css */
+button {
+  margin: 10px auto;
+  padding: 10px 24px;
+  cursor: pointer;
+  width: 36.5%;
+  display: block;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  color: white;
+  background-color: #0f0c0cb7;
+  border-radius: 7px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black !important;
+  opacity: 0.95;
+  box-shadow: 0px 0px 16px 0px #000;
+}
+
+.general span,
+.vehicles span,
+.doors span,
+.windows span {
+  margin: 10px auto;
+  padding: 10px 24px;
+  cursor: pointer;
+  width: 30%;
+  display: block;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  text-align: center;
+  color: white;
+  background-color: #0f0c0cb7;
+  border-radius: 7px;
+  background-image: linear-gradient(45deg, rgb(18, 105, 202), rgb(0, 242, 96));
+  background-size: 200% 200%;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black !important;
+  opacity: 0.95;
+  box-shadow: 0px 0px 16px 0px #000;
+}
+
+hr {
+  height: 2px;
+  width: 28%;
+  color: #eb0000;
+  background-color: rgba(18, 105, 202, 1);
+  border: none;
+}
+
+.general {
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 700px;
+  color: white;
+  width: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -250px;
+  margin-left: -400px;
+  padding-bottom: 20px;
+}
+
+.vehicles {
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 700px;
+  color: white;
+  width: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -250px;
+  margin-left: -400px;
+  padding-bottom: 20px;
+}
+
+.doors {
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 700px;
+  color: white;
+  width: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -250px;
+  margin-left: -400px;
+  padding-bottom: 20px;
+}
+
+.windows {
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 700px;
+  color: white;
+  width: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -250px;
+  margin-left: -400px;
+  padding-bottom: 20px;
+}
+
+#close {
+  display: inline-block;
+  float: right;
+  padding: 5px;
+  padding-right: 10px;
+  color: rgb(255, 0, 0);
+}
+
+button {
+  border: 0;
+  background-image: linear-gradient(45deg, rgb(18, 105, 202), rgb(0, 242, 96));
+  background-size: 200% 200%;
+}
+
+/* change look of buttons when hovering over them */
+button:hover {
+  letter-spacing: 0.2px;
+}
+
+.id-card {
+  display: none;
+  position: fixed;
+  flex-direction: column;
+  top: 410px;
+  left: 20px;
+  width: 430px;
+  background-color: rgba(10, 10, 10, 0.767);
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 20px 30px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.id-card .haerka {
+  width: 50%;
+  height: 2px;
+  border-radius: 2px;
+  background-image: repeating-linear-gradient(45deg, rgb(18,105,202), rgb(0,242,96));
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.id-card .title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.id-card .title .title-inner {
+  width: 100%;
+}
+
+.id-card .title .title-inner h1 {
+  font-size: 25px;
+  line-height: 15px;
+}
+
+.id-card .title .title-inner h2 {
+  font-size: 15px;
+  font-weight: 100;
+  text-transform: uppercase;
+  line-height: 3px;
+}
+
+.id-card .title .title-icon .icon-inner {
+  background-image: repeating-linear-gradient(45deg, rgb(18,105,202), rgb(0,242,96));
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.id-card .title .title-icon .icon-inner .fa-solid {
+  font-size: 25px;
+}
+
+.id-card .content {
+  width: 100%;
+}
+
+.id-card .content p {
+  color: rgb(190, 190, 190);
+  font-size: 15px;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.id-card .content p span {
+  font-size: 15px;
+  font-weight: 800;
+  color: white;
+}
+
+.id-card .content .content-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.phone-card {
+  display: none;
+  position: fixed;
+  flex-direction: column;
+  top: 410px;
+  left: 20px;
+  width: 430px;
+  background-color: rgba(10, 10, 10, 0.767);
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 20px 30px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-card .haerka {
+  width: 50%;
+  height: 2px;
+  border-radius: 2px;
+  background-image: repeating-linear-gradient(45deg, rgb(18,105,202), rgb(0,242,96));
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.phone-card .title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.phone-card .title .title-inner {
+  width: 100%;
+}
+
+.phone-card .title .title-inner h1 {
+  font-size: 25px;
+  line-height: 15px;
+}
+
+.phone-card .title .title-inner h2 {
+  font-size: 15px;
+  font-weight: 100;
+  text-transform: uppercase;
+  line-height: 3px;
+}
+
+.phone-card .title .title-icon .icon-inner {
+  background-image: repeating-linear-gradient(45deg, rgb(18,105,202), rgb(0,242,96));
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-card .title .title-icon .icon-inner .fa-solid {
+  font-size: 25px;
+}
+
+.phone-card .content {
+  width: 100%;
+}
+
+.phone-card .content p {
+  color: rgb(190, 190, 190);
+  font-size: 15px;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.phone-card .content p span {
+  font-size: 15px;
+  font-weight: 800;
+  color: white;
+}
+
+.phone-card .content .content-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

@@ -1,0 +1,47 @@
+body {
+	overflow: hidden;
+	background-color: transparent !important;
+	display: none;
+}
+
+#ems_tablet {
+	position: absolute;
+	top: 10%;
+	width: 1140px;
+	/*height: 650px;*/
+	margin: auto;
+	border: 20px black solid;
+	border-top-width: 20px;
+	border-bottom-width: 20px;
+	border-top-width: 20px;
+	border-bottom-width: 20px;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#loader {
+	position: fixed;
+	z-index: 999;
+	overflow: hidden;
+	margin: auto;
+	top: 140px;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: #fff;
+	color: #000;
+	display: none;
+}
+.loader-content{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+.window{
+	min-height: 650px;
+	display: block !important;
+}

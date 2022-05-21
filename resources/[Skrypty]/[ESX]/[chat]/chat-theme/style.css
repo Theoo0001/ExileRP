@@ -1,0 +1,315 @@
+src: url('../BarlowCondensed.ttf');
+
+* {
+  font-family: 'Barlow Condensed', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.chat-window {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  max-width: 420px;
+  width: 40%;
+  height: 340px;
+  word-wrap: break-word;
+  padding-right: 27px;
+
+  background-color: rgba(52, 73, 94, 0) !important;
+  -webkit-animation-duration: 2s;
+}
+
+@font-face {
+  font-family: 'Font2';
+  src: url(https://runtime.fivem.net/temp/ChaletLondonNineteenSixty.otf?a);
+}
+
+@font-face {
+  font-family: 'Font2_cond';
+  src: url(https://runtime.fivem.net/temp/chaletcomprime-colognesixty-webfont.ttf?a);
+}
+
+#app {
+  font-family: 'Barlow Condensed', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+  background-color: transparent;
+}
+
+.msg {
+  font-family: Font2, sans-serif;
+  color: #fff;
+
+  line-height: 20px;
+  margin-bottom: 0;
+  font-size: 14px !important;
+}
+
+.chat-messages {
+  margin: 0;
+  height: 100%;
+}
+
+.msg > span > span > b {
+  font-family: Font2, sans-serif;
+
+  vertical-align: baseline;
+  padding-right: 5px;
+
+  line-height: 20px;
+
+  font-size: 16px !important;
+}
+
+.msg > span > span > span {
+  vertical-align: baseline;
+}
+
+.msg i:first-of-type {
+  font-style: normal;
+  color: #c0c0c0;
+}
+
+.chat-input {
+  position: absolute;
+  left: calc(0.55vw);
+  top: calc(20.56vw);
+  width: 28%;
+  background: inherit !important;
+
+  text-align: right;
+
+  bottom: auto;
+  right: auto;
+
+  height: auto;
+
+  font-family: Font2, sans-serif;
+}
+
+.chat-input > div {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: calc(0.15625vw / 2);
+  border-radius: 5px;
+}
+
+.chat-input .prefix {
+  margin: 0;
+  margin-left: 0.7%;
+  margin-top: -0.1%;
+}
+
+.chat-input > div + div {
+  position: absolute;
+  bottom: calc(1.65vh + 0.15625vw + 0.15625vw + 0.15625vw + (0.15625vw / 2));
+  width: 57.6% !important;
+
+  text-align: left;
+  border-radius: 5px;
+}
+
+.suggestions {
+  list-style-type: none;
+  padding: 5px;
+  padding-left: 27px;
+  font-size: 1.1rem;
+  box-sizing: border-box;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+textarea {
+  font-size: 1.1rem;
+  display: block;
+  box-sizing: border-box;
+  padding: 7px;
+  padding-left: 25px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-width: 0;
+  height: 34px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.default {
+  width: 98.5%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  min-height: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: -1.5rem;
+  font-family: sans-serif;
+  vertical-align: baseline;
+}
+
+@keyframes animMsg {
+  0% {
+    opacity: 0;
+    padding-left: 500px;
+  }
+  100% {
+    opacity: 1;
+    padding-left: 30px;
+  }
+}
+
+.tweet {
+  width: 98.5%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  min-height: 40px;
+  background: rgba(27, 149, 224, 0.67);
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-shadow: none !important;
+  vertical-align: baseline;
+  animation-name: animMsg;
+  animation-duration: 2s;
+  margin-left: -1.5rem;
+}
+.tweet span {
+  vertical-align: middle;
+  /* filter: url(#svgDropShadowFilter); */
+  font-family: sans-serif;
+}
+
+.me {
+  width: 98.5%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  min-height: 40px;
+  background: rgba(0, 0, 0, 0.2) !important;
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-shadow: none !important;
+  vertical-align: baseline;
+  margin-left: -1.5rem;
+}
+.me span {
+  vertical-align: middle;
+  /* filter: url(#svgDropShadowFilter); */
+  font-family: sans-serif;
+}
+
+.ogloszenie {
+  width: 98.5%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  min-height: 40px;
+  background: rgba(3, 180, 27, 0.67);
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-shadow: none !important;
+  vertical-align: baseline;
+  animation-name: animMsg;
+  animation-duration: 2s;
+  margin-left: -1.5rem;
+}
+.ogloszenie span {
+  vertical-align: middle;
+  /* filter: url(#svgDropShadowFilter); */
+  font-family: sans-serif;
+}
+
+.icon {
+  position: relative;
+  bottom: 0px;
+  right: 5px;
+  float: right;
+  opacity: 0.5;
+  display: inline-flex;
+}
+
+.med {
+  width: 98.5%;
+  margin-top: 5px;
+  margin-left: 5px;
+  min-height: 40px;
+  background: rgba(193, 32, 32, 0.2);
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-shadow: none !important;
+  vertical-align: baseline;
+  margin-left: -1.5rem;
+}
+.med span {
+  vertical-align: middle;
+  /* filter: url(#svgDropShadowFilter); */
+  font-family: sans-serif;
+}
+
+.localooc {
+  width: 98.5%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  min-height: 40px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-shadow: none !important;
+  vertical-align: baseline;
+  margin-left: -1.5rem;
+}
+.localooc span {
+  vertical-align: middle;
+  /* filter: url(#svgDropShadowFilter); */
+  font-family: sans-serif;
+}
+.ooc {
+  width: 98.5%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  min-height: 40px;
+  background: rgba(0, 0, 0, 0.2) !important;
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-shadow: none !important;
+  vertical-align: baseline;
+  margin-left: -1.5rem;
+}
+.ooc span {
+  vertical-align: middle;
+  /* filter: url(#svgDropShadowFilter); */
+  font-family: sans-serif;
+}
+.radio {
+  width: 98.5%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  min-height: 40px;
+  background: rgba(193, 32, 32, 0.67);
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-shadow: none !important;
+  vertical-align: baseline;
+  margin-left: -1.5rem;
+}
+.radio span {
+  vertical-align: middle;
+  /* filter: url(#svgDropShadowFilter); */
+  font-family: sans-serif;
+}

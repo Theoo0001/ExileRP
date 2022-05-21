@@ -1,0 +1,36 @@
+.fingerprint-container svg.fingerprint path.clone[data-v-0ef338e9] {
+	-webkit-transition: stroke-dashoffset 2s ease-out;
+	transition: stroke-dashoffset 2s ease-out
+}
+
+.fingerprint-container svg.fingerprint.active[data-v-0ef338e9] {
+	-webkit-transform: scale(.97);
+	transform: scale(.97)
+}
+
+.fingerprint-container svg.fingerprint.active path.clone[data-v-0ef338e9] {
+	stroke-dashoffset: 0
+}
+
+.scan-success[data-v-0ef338e9] {
+	display: none!important
+}
+
+.fingerprint-container .fingerprint[data-v-0ef338e9] {
+	width: 20vh;
+	height: 20vh;
+	overflow: visible
+}
+
+.fingerprint-container.success .fingerprint[data-v-0ef338e9] {
+	-webkit-transform: scale(0);
+	transform: scale(0)
+}
+
+.fingerprint-container.success .scan[data-v-0ef338e9] {
+	display: none
+}
+
+.fingerprint-container.success .scan-success[data-v-0ef338e9] {
+	display: block
+}

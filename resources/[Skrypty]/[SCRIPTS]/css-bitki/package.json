@@ -1,0 +1,22 @@
+{
+  "name": "bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./discord/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xfsdGRE"
+  },
+  "author": "xfsdGREgejjebany",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xfsdGRE"
+  },
+  "homepage": "https://github.com/xfsdGRE",
+  "dependencies": {
+    "discord.js": "^11.6.2"
+  }
+}

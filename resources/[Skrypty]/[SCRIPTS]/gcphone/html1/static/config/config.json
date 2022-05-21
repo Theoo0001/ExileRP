@@ -1,0 +1,214 @@
+{
+  "reseau": "ExileLTE",
+  "warningMessageCount": 350,
+  "themeColor": "#303f9f",
+  "colors": [
+    "#EF5350",
+    "#EC407A",
+    "#AB47BC",
+    "#7E57C2",
+    "#5C6BC0",
+    "#42A5F5",
+    "#29B6F6",
+    "#26C6DA",
+    "#26A69A",
+    "#66BB6A",
+    "#9CCC65",
+    "#D4E157",
+    "#FFCA28",
+    "#FFA726",
+    "#FF7043",
+    "#8D6E63",
+    "#78909C"
+  ],
+
+  "useFormatNumberFrance": true,
+
+  "useWebRTCVocal": false,
+  "RTCConfig": {
+    "iceServers": [
+      {
+        "urls": ["turn:turn.exile:3478"],
+        "username": "Misiaczek",
+        "credential": "ExileRP"
+      }
+    ]
+  },
+
+  "background": {
+    "Exile": "exile.png",
+    "Grove": "back001.jpg",
+    "Lion": "back002.jpg",
+    "Assassins Creed": "back003.jpg",
+    "Anime Girl": "back004.jpg",
+    "Fortnite": "back005.jpg",
+    "Couple": "back006.jpg",
+    "Bunnies": "back007.jpg",
+    "Niestandardowy URL": "URL"
+  },
+
+  "background_default": {
+    "label": "Exile",
+    "value": "exile.png"
+  },
+
+  "coque": {
+    "iPhone X": "iphonex.png"
+  },
+
+  "coque_default": {
+    "label": "iPhone 12",
+    "value": "iphonex.png"
+  },
+
+  "serviceCall": [
+    {
+      "display": "SASP",
+      "icon": "/html/static/img/icons_app/police.png",
+      "subMenu": [
+        {
+          "title": "Wyślij zgłoszenie",
+          "eventName": "esx_addons_gcphone:call",
+          "type": {
+            "number": "police"
+          }
+        }
+      ]
+    },
+    {
+      "display": "SAMS",
+      "backgroundColor": "red",
+      "icon": "/html/static/img/icons_app/medic.png",
+      "subMenu": [
+        {
+          "title": "Wezwij SAMS",
+          "eventName": "esx_addons_gcphone:call",
+          "type": {
+            "number": "ambulance"
+          }
+        }
+      ]
+    },
+    {
+      "display": "LSPO",
+      "icon": "/html/static/img/icons_app/cardealer.png",
+      "subMenu": [
+        {
+          "title": "Napisz wiadomość",
+          "eventName": "esx_addons_gcphone:call",
+          "type": {
+            "number": "psycholog"
+          }
+        }
+      ]
+    },
+    {
+      "display": "TAXI",
+      "icon": "/html/static/img/icons_app/taxi.png",
+      "subMenu": [
+        {
+          "title": "Zamów Taksówkę",
+          "eventName": "esx_addons_gcphone:call",
+          "type": {
+            "number": "taxi"
+          }
+        }
+      ]
+    },
+    {
+      "display": "MG",
+      "icon": "/html/static/img/icons_app/mechanic.png",
+      "subMenu": [
+        {
+          "title": "Wezwij Pomoc",
+          "eventName": "esx_addons_gcphone:call",
+          "type": {
+            "number": "mechanik2"
+          }
+        }
+      ]
+    },
+    {
+      "display": "DOJ",
+      "icon": "/html/static/img/icons_app/sad.png",
+      "subMenu": [
+        {
+          "title": "Powiadom DOJ",
+          "eventName": "esx_addons_gcphone:call",
+          "type": {
+            "number": "doj"
+          }
+        }
+      ]
+    },
+    {
+      "display": "BROKER",
+      "icon": "/html/static/img/icons_app/cardealer.png",
+      "subMenu": [
+        {
+          "title": "Napisz wiadomość",
+          "eventName": "esx_addons_gcphone:call",
+          "type": {
+            "number": "cardealer"
+          }
+        }
+      ]
+    },
+    {
+      "display": "ILLEGAL WEB",
+      "icon": "/html/static/img/icons_app/tchat.png",
+      "subMenu": [
+        {
+          "title": "Szukaj klienta",
+          "eventName": "esx_addons_gcphone:phonedealer"
+        }
+      ]
+    }
+  ],
+
+  "apps": [
+    {
+      "name": "Telefon",
+      "icons": "/html/static/img/icons_app/call.png",
+      "routeName": "appels",
+      "inHomePage": true
+    },
+    {
+      "name": "SMS",
+      "icons": "/html/static/img/icons_app/sms.png",
+      "routeName": "messages",
+      "inHomePage": true,
+      "puceRef": "nbMessagesUnread"
+    },
+    {
+      "name": "Kontakty",
+      "icons": "/html/static/img/icons_app/contacts.png",
+      "routeName": "contacts",
+      "inHomePage": true
+    },
+    {
+      "name": "Bank",
+      "icons": "/html/static/img/icons_app/bank.png",
+      "routeName": "bank",
+      "inHomePage": true
+    },
+    {
+      "name": "Ustawienia",
+      "icons": "/html/static/img/icons_app/settings.png",
+      "routeName": "parametre",
+      "inHomePage": false
+    },
+    {
+      "name": "Kamera",
+      "icons": "/html/static/img/icons_app/photo.png",
+      "routeName": "photo",
+      "inHomePage": false
+    },
+    {
+      "name": "9GAG",
+      "icons": "/html/static/img/icons_app/9gag.png",
+      "routeName": "9gag",
+      "inHomePage": false
+    }
+  ]
+}

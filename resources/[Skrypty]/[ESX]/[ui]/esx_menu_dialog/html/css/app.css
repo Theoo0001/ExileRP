@@ -1,0 +1,130 @@
+/*
+#98D4E0 - jasny
+#0E718B - ciemny
+#000000 - czarny
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+@font-face {
+	font-family: bankgothic;
+	src: url('../fonts/bankgothic.ttf');
+}
+
+@font-face {
+	font-family: pcdown;
+	src: url('../fonts/pdown.ttf');
+}
+
+#controls {
+	font-family: 'Source Sans Pro', sans-serif;
+  text-transform: uppercase;
+	font-size: 3em;
+  color: #FFF;
+  background: none;
+	position: absolute;
+	bottom: 40;
+	right: 40;
+}
+
+.controls {
+	display: none;
+}
+
+.dialog {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: rgba(42, 44, 49, 0.75); 
+  -opacity         : 0.75;
+	color: rgba(255, 255, 255, 0.95);
+	position: absolute;
+  overflow: hidden;
+  -border-radius: 20px;
+	top: 50%;
+	left: 50%;
+	min-width: 10%;
+	height: 90px;
+  transform: translate(-50%, -50%);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow : 0px 0px 10px 0px #000;
+}
+
+.dialog.big {
+	height: 200px;
+}
+
+.dialog .head {
+  font-family: 'Source Sans Pro', sans-serif;
+	background-image: repeating-linear-gradient(to left, rgb(18,105,202), rgb(0,242,96));
+  text-transform: capitalize;
+  background-size: 200% 200%;
+  background-position: 100% 100%;
+	text-align: center;
+	height: 30px;
+}
+
+.dialog .head span:before {
+  font-family: 'Source Sans Pro', sans-serif;
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.dialog input[type="text"] {
+  font-family: 'Source Sans Pro', sans-serif;
+  background: none;
+  outline: none;
+  border: none;
+	width: 100%;
+	height: 32px;
+  color: rgba(255, 255, 255, 0.95);
+  text-align: center;
+}
+
+.dialog textarea {
+  font-family: 'Source Sans Pro', sans-serif;
+  background: none;
+  outline: none;
+  border: none;
+	width: 100%;
+	height: 128px;
+}
+
+.dialog button {
+  font-family: 'Source Sans Pro', sans-serif;
+	color: rgba(255, 255, 255, 0.95);
+  text-transform: uppercase;
+  background: none;
+  outline: none;
+  border: none;
+	width: 50%;
+	height: 30px;
+}
+
+.dialog button:hover {
+  background-color: rgba(99, 92, 92, 0.75);
+  -opacity         : 0.75;
+  color: rgba(255, 255, 255, 1);
+  border-bottom: 1px solid;
+  border-image-source: linear-gradient(45deg, rgb(18,105,202), rgb(0,242,96));
+  border-image-slice: 1;
+
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes AnimationName { 
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}

@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+
+#statusHud {
+    width: 90%;
+    height: 5%;
+    position: absolute;
+    bottom: 0.2%;
+    left: 1.5%;
+    /* border: 1px;
+    border-style: solid;
+    border-color: blue; */
+}
+
+.streetlabettext1 {
+    margin-top: -110%;
+    font-size: 0.62vw;
+    font-weight: bold;
+    font-family: 'Khand', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+#streetlabel {
+	display: none;
+}
+
+.streetlabettext {
+    margin-top: -70%;
+    font-size: 0.72vw;
+    font-weight: bold;
+    font-family: 'Khand', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+#street3 {
+    position: absolute;
+    top: 45%;
+    right: 5%;
+    float: right;
+}
+
+.bar {
+    position: relative;
+    width: 3%;
+    height: 100%;
+    float: left;
+    top: 0%;
+    /* border: 1px;
+    border-style: solid;
+    border-color: red; */
+}
+
+.barIcon {
+    right: 29.5%;
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    float: left;
+    bottom: 37%;
+    /* border: 1px;
+    border-style: solid;
+    border-color: green; */
+}
+
+.beltIcon {
+    right: 33.5%;
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    float: left;
+    bottom: 30%;
+    /* border: 1px;
+    border-style: solid;
+    border-color: green; */
+}
+
+.fade-out {
+    animation: fadeOut ease 8s;
+    -webkit-animation: fadeOut ease 8s;
+    -moz-animation: fadeOut ease 8s;
+    -o-animation: fadeOut ease 8s;
+    -ms-animation: fadeOut ease 8s;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-o-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-ms-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+#carhud {
+    width: 12%;
+    height: 15%;
+    position: absolute;
+    bottom: 8%;
+    left: 15%;
+	display: block;
+}
+
+.carhudbar {
+    position: absolute;
+    width: 59%;
+    height: 59%;
+    float: left;
+    top: 40%;
+    left: 10%;
+}
+
+.carhudbelt {
+    position: absolute;
+    width: 22%;
+    height: 27%;
+    float: left;
+    bottom: 0%;
+    left: 43%;
+}
+
+#speedtext {
+    position: absolute;
+    width: 59%;
+    height: 59%;
+    float: left;
+    top: 30%;
+    left: 17.65%;
+    font-size: 1.2vw;
+    font-weight: 800;
+    font-family: 'Khand', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+#kmhtext {
+    position: absolute;
+    width: 59%;
+    height: 59%;
+    float: left;
+    top: 55%;
+    left: 17.65%;
+    font-size: 0.7vw;
+    font-weight: 800;
+    font-family: 'Khand', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+#geartext {
+    position: absolute;
+    width: 16%;
+    height: 21%;
+    float: left;
+    top: 80%;
+    left: 24%;
+    font-size: 0.7vw;
+    font-weight: 800;
+    font-family: 'Khand', sans-serif;
+    text-align: center;
+    color: white;
+    border: 0.25vw;
+    border-radius: 100px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 1);
+}
+
+.carhudprogress {
+    -webkit-transition: 0.35s stroke-dashoffset;
+    -o-transition: 0.35s stroke-dashoffset;
+    transition: 0.35s stroke-dashoffset;
+    -webkit-transform: rotate(140deg);
+    -ms-transform: rotate(140deg);
+    transform: rotate(135deg);
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+.corners {
+    width: calc(12.5% - 4px);
+    height: 29px;
+    position: absolute;
+    z-index: 100;
+    margin: 2px;
+    opacity: 0;
+}
+
+.danger {
+    filter: brightness(0) saturate(100%) invert(23%) sepia(88%) saturate(7076%) hue-rotate(358deg) brightness(100%) contrast(122%);
+}
+
+.dangerGrad {
+    background: rgb(0, 72, 255) !important;
+}
+
+.progress {
+    -webkit-transition: 0.35s stroke-dashoffset;
+    -o-transition: 0.35s stroke-dashoffset;
+    transition: 0.35s stroke-dashoffset;
+    -webkit-transform: rotate(140deg);
+    -ms-transform: rotate(140deg);
+    transform: rotate(-90deg);
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+.backgroundCircle,
+.outer {
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+@media(min-width:2100px) {
+    .stat,
+    .stat .icon {
+        height: 44px;
+    }
+}
+
+@media(min-width:2200px) {
+    .stat,
+    .stat .icon {
+        height: 46px;
+    }
+    .status {
+        width: 280px;
+    }
+    .stat {
+        width: 251px;
+    }
+    .stat span {
+        font-size: 14px;
+        line-height: 15px;
+        margin-top: 2px;
+    }
+}
+
+@media(min-width:2300px) {
+    .stat,
+    .stat .icon {
+        height: 48px;
+    }
+}
+
+@media(min-width:2400px) {
+    .stat,
+    .stat .icon {
+        height: 50px;
+    }
+    .status {
+        width: 300px;
+    }
+    .stat {
+        width: 271px;
+    }
+}
+
+@media(min-width:2500px) {
+    .stat,
+    .stat .icon {
+        height: 52px;
+    }
+}
+
+@media(max-width:1800px) {
+    .stat,
+    .stat .icon {
+        height: 38px;
+    }
+}
+
+@media(max-width:1700px) {
+    .stat,
+    .stat .icon {
+        height: 36px;
+    }
+}
+
+@media(max-width:1600px) {
+    .stat,
+    .stat .icon {
+        height: 34px;
+    }
+    .status {
+        width: 240px;
+    }
+    .stat {
+        width: 211px;
+    }
+    .stat span {
+        font-size: 12px;
+        line-height: 12px;
+        margin-top: 2px;
+    }
+    .stat .icon img {
+        margin-top: 2px;
+    }
+}
+
+@media(max-width:1500px) {
+    .stat,
+    .stat .icon {
+        height: 32px;
+    }
+}
+
+@media(max-width:1400px) {
+    .stat,
+    .stat .icon {
+        height: 30px;
+    }
+    .status {
+        width: 225px;
+    }
+    .stat {
+        width: 196px;
+        margin-bottom: 4px;
+    }
+}
+
+@media(max-width:1300px) {
+    .stat,
+    .stat .icon {
+        height: 28px;
+    }
+}
+
+@media(max-width:1200px) {
+    .stat,
+    .stat .icon {
+        height: 26px;
+    }
+    .stat span {
+        font-size: 10px;
+        line-height: 10px;
+    }
+    .status {
+        width: 200px;
+    }
+    .stat {
+        width: 171px;
+    }
+}
+
+@media(max-width:1100px) {
+    .stat,
+    .stat .icon {
+        height: 24px;
+    }
+}

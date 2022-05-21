@@ -1,0 +1,86 @@
+.note-container[data-v-1ceed9f8] {
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: rgba(0, 23, 65, 0.72);
+  -webkit-box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+}
+
+.note-content[data-v-1ceed9f8] {
+  color: #f3f3f3;
+  padding: 0.5rem;
+  border: 1px solid rgb(12, 122, 245);
+  border-radius: 4px;
+}
+
+.note-author[data-v-1ceed9f8] {
+  font-style: italic;
+}
+
+.notes-container[data-v-0840df5b] {
+  background-color: rgba(3, 3, 14, 0.42);
+  max-height: 50vh;
+}
+
+.note-container[data-v-0840df5b] {
+  padding: 1rem;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+}
+
+.note-content[data-v-0840df5b] {
+  color: #f3f3f3;
+}
+
+.convictions-content[data-v-1acb1fcc] {
+  font-size: 1rem;
+  color: #f3f3f3;
+}
+
+.money[data-v-1acb1fcc] {
+  color: green;
+}
+
+.citizen-convictions-header[data-v-1acb1fcc] {
+  background-color: rgb(12, 122, 245) !important;
+  color: #000;
+}
+
+.citizen-convictions-header th[data-v-1acb1fcc] {
+  color: #000;
+}
+
+.convictions-content[data-v-2af27c0d] {
+  font-size: 1rem;
+  color: #f3f3f3;
+}
+
+.money[data-v-2af27c0d] {
+  color: green;
+}
+
+.citizen-convictions-header[data-v-2af27c0d] {
+  background-color: rgb(12, 122, 245) !important;
+  color: #000;
+}
+
+.citizen-convictions-header th[data-v-2af27c0d] {
+  color: #000;
+}
+
+.search-button[data-v-69093a56] {
+  background-color: rgb(12, 122, 245);
+  color: #000;
+  font-weight: 700;
+}
+
+.search-citizens[data-v-b5b28fa6] {
+  font-family: Saira, serif;
+}
+
+.police-button[data-v-b5b28fa6] {
+  font-weight: 700;
+}

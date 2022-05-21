@@ -1,0 +1,18 @@
+Locales ['pl'] = {
+	['input'] = 'Kliknij ~INPUT_RELOAD~ aby oferować dragi',
+	['reject'] = 'Osoba odrzuciła twoją ofertę',
+	['no_more_drugs'] = 'Nie posiadasz więcej dragów!',
+	['too_far_away'] = 'Oddaliłeś się! Sprzedawanie anulowane',
+	['remained'] = 'Pozostało ',
+	['you_have_sold'] = 'Sprzedałeś ',
+	['must_be'] = 'Musi być minimalnie ',
+	['too_far_away_from_city'] = 'Jesteś za daleko miasta,  tutaj nikt nie kupuje dragow!',
+	['to_sell_drugs'] = ' szeryfów aby sprzedawać dragi!',
+	['opium'] = 'paczke/i opium za ',
+	['kokaina'] = 'paczke kokainy za ',
+	['meta'] = 'paczke metamfetaminy za ',
+	['zastrzyksteryd2'] = ' zastrzyk sterydu za ',
+	['weedpack'] = ' paczke marihuany za ',
+	['paczkaamfetaminy'] = ' paczke amfetaminy za ',	
+	['paczkakokainy'] = ' paczke kokainy za ',
+}

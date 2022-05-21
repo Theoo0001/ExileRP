@@ -1,0 +1,12 @@
+Config = {}
+Config.sms = 3
+Config.call = 1
+ShowNumberNotification = true 
+Config.BuySimProste = 100
+Config.BuySimRozbudowane = 250
+Config.BuySimUltra = 500
+Config.zastrzezSIM = 10000
+Config.doladujSIM = 2
+Config.duplikatSIM = 2500
+Config.blockSIM = 2500
+Config.CopyContactsSIM = 5000

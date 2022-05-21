@@ -1,0 +1,409 @@
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+		<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	
+		<style>
+		.general {display: none;}
+		.esx {display: none;}
+		.vehicles {display: none;}
+		.vehicle {display: none;}
+		.doors {display: none;}
+		.windows {display: none;}
+  
+		</style>
+		
+	<script>
+	$(function() {
+		/* open the UI for user */
+		window.addEventListener('message', function(event) {
+			if (event.data.type == "openGeneral"){
+				$('.general').css('display', 'block')
+				$('.esx').css('display', 'none')
+				$('.vehicles').css('display', 'none')
+				$('.doors').css('display', 'none')
+				$('.windows').css('display', 'none')
+				
+			} else if (event.data.type == "openESX"){
+				$('.general').css('display', 'none')
+				$('.esx').css('display', 'block')
+				$('.vehicles').css('display', 'none')
+				$('.doors').css('display', 'none')
+				$('.windows').css('display', 'none')
+				
+			} else if (event.data.type == "openVehicles"){
+				$('.general').css('display', 'none')
+				$('.esx').css('display', 'none')
+				$('.vehicles').css('display', 'block')
+				$('.doors').css('display', 'none')
+				$('.windows').css('display', 'none')
+				
+			} else if (event.data.type == "openDoorActions"){
+				$('.general').css('display', 'none')
+				$('.esx').css('display', 'none')
+				$('.vehicles').css('display', 'none')
+				$('.doors').css('display', 'block')
+				$('.windows').css('display', 'none')
+				
+			} else if (event.data.type == "openWindows"){
+				$('.general').css('display', 'none')
+				$('.esx').css('display', 'none')
+				$('.vehicles').css('display', 'none')
+				$('.doors').css('display', 'none')
+				$('.windows').css('display', 'block')
+				
+			} else if (event.data.type == "closeAll"){
+				$('.general').css('display', 'none')
+				$('.esx').css('display', 'none')
+				$('.vehicles').css('display', 'none')
+				
+			} else if (event.data.type == "showVehicleButton"){
+				$('.vehicle').css('display', 'block')
+				
+			} else if (event.data.type == "hideVehicleButton"){
+				$('.vehicle').css('display', 'none')
+				
+			} else if (event.data.type == "showBlachaButton1") {
+				document.getElementById('pokaz_odznake').innerHTML = "Pokaż odznakę " + event.data.value;
+				$('.pokaz_odznake').css('display','block')
+				
+			} else if (event.data.type == "hideBlachaButton1") {
+				$('.pokaz_odznake').css('display','none')
+			} else if (event.data.type == "showBlachaButton2") {
+				document.getElementById('pokaz_odznake2').innerHTML = "Pokaż odznakę " + event.data.value;
+				$('.pokaz_odznake2').css('display','block')
+				
+			} else if (event.data.type == "hideBlachaButton2") {
+				$('.pokaz_odznake2').css('display','none')
+			} else if (event.data.type == "updateInfo") {
+				$(".charname").text(event.data.name);
+				$(".jobname").text(event.data.job);
+				$(".hiddenjobname").text(event.data.hiddenjob);
+			} else if (event.data.type == "showID") {
+				$('#player-id').text(event.data.id);
+				$('#sex').text(event.data.sex);
+				$('#idcard-name').text(event.data.name);
+				$('#idcard-birth').text(event.data.birth);
+				$('#idcard-weapon').text(event.data.weapon);
+				$('#idcard-height').text(event.data.height);
+				$('#idcard-ub').text(event.data.ub);
+				$('#idcard-prawko').text(event.data.prawko);
+
+				$('.id-card').fadeIn();
+
+				setTimeout(function() {
+					$('.id-card').fadeOut();
+				}, 10000);
+			} else if (event.data.type == "showPhone") {
+				$('#phone-player-id').text(event.data.id);
+				$('#phone-sex').text(event.data.sex);
+				$('#phonecard-name').text(event.data.name);
+				$('#phonecard-job').text(event.data.job);
+				$('#phonecard-phone').text(event.data.phone);
+				$('#phonecard-bank').text(event.data.bank);
+
+				$('.phone-card').fadeIn();
+
+				setTimeout(function() {
+					$('.phone-card').fadeOut();
+				}, 10000);
+			}		
+		});
+	});
+	</script>
+	
+	<script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
+
+    <body>
+		<div class="id-card">
+			<div class="title">
+				<div class="title-inner">
+					<h1>Dowód osobisty</h1>
+					<h2>ID: <span id="player-id"></span> | <span id="sex"></span></h2>
+				</div>
+				<div class="title-icon">
+					<div class="icon-inner">
+						<i class="fa-solid fa-id-card"></i>
+					</div>
+				</div>
+			</div>
+			<div class="haerka"></div>
+			<div class="content">
+				<p>Imię i nazwisko: <span id="idcard-name"></span></p>
+				<p>Data urodzenia: <span id="idcard-birth"></span></p>
+				<div class="content-div">
+					<p>Licencja na broń: <span id="idcard-weapon"></span></p>
+					<p>Wzrost: <span id="idcard-height"></span></p>
+				</div>
+				<div class="content-div">
+					<p>Ubezpieczenie: <span id="idcard-ub"></span></p>
+					<p>Prawo jazdy Kat.: <span id="idcard-prawko"></span></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="phone-card">
+			<div class="title">
+				<div class="title-inner">
+					<h1>Wizytówka</h1>
+					<h2>ID: <span id="phone-player-id"></span> | <span id="phone-sex"></span></h2>
+				</div>
+				<div class="title-icon">
+					<div class="icon-inner">
+						<i class="fa-solid fa-phone"></i>
+					</div>
+				</div>
+			</div>
+			<div class="haerka"></div>
+			<div class="content">
+				<p>Imię: <span id="phonecard-name"></span></p>
+				<p>Praca: <span id="phonecard-job"></span></p>
+				<div class="content-div">
+					<p>Numer telefonu: <span id="phonecard-phone"></span></p>
+					<p>Numer konta: <span id="phonecard-bank"></span></p>
+				</div>
+			</div>
+		</div>
+		<div class="general">
+			<div class="main">		
+				<span class="jobname"></span>
+				<span class="hiddenjobname"></span>
+				<!--<hr>-->
+				<button class="manage_id">Zarządzanie dokumentami</button>
+				<button class="pokaz_odznake" id="pokaz_odznake">Pokaż odznakę</button>
+				<button class="pokaz_odznake2" id="pokaz_odznake2">Pokaż odznakę</button>
+				
+				<div class="vehicle">
+					<button class="lockveh">Otwórz/zamknij pojazd</button>
+					<button id="veh_gui">Interakcje z pojazdem</button>
+				</div>
+				
+				<button id="exitgen_gui">Wyjdź</button>
+			</div>
+
+		</div>
+		
+		<div class="vehicles">
+			<div class="main">
+				<button id="window_gui">Zarządzanie oknami</button>
+				<button id="door_gui">Zarządzanie drzwiami</button>
+				<button id="keys_gui">Daj zapasowy klucz pasażerowi</button>
+				<button id="gen4_gui">Cofnij</button>
+				<button id="exitveh_gui">Wyjdź</button>
+			</div>
+		</div>
+		
+		<div class="doors">
+			<div class="main">
+				<button class="toggle_hood">Maska</button>
+				<button class="toggle_trunk">Bagażnik</button>
+				<button class="toggle_fldoor">Lewe przednie drzwi</button>
+				<button class="toggle_frdoor">Prawe przednie drzwi</button>
+				<button class="toggle_rldoor">Lewe tylnie drzwi</button>
+				<button class="toggle_rrdoor">Prawe tylnie drzwi</button>
+				<button id="veh2_gui">Cofnij</button>
+				<button id="exitveh2_gui">Wyjdź</button>
+			</div>
+		</div>
+		
+		<div class="windows">
+			<div class="main">
+				<button class="toggle_windowsup">Podnieś szyby</button>
+				<button class="toggle_windowsdown">Opuść szyby</button>
+				<button id="veh3_gui">Cofnij</button>
+				<button id="exitveh3_gui">Wyjdź</button>
+			</div>
+		</div>
+    <script type="text/javascript">(function(){window['__CF$cv$params']={r:'6de6036dec1d6241',m:'SAtmSZGdF_zPiIIMQKRe3CpGXm_bFtdg9rOw.4Edb24-1645006512-0-AfpT02AhXm1saxX5cYsoxEmD/4ZQy+98+pqNZVlnqOBsbBPtUQGqBkQmL33cDSqi+ruWwlFvZkX1/yW8/ABS/2h1frTj2K3OfkGH3of/GkhFpzVmAdDUd2c/XA5YOnLBfipGqV2iBHVL//dyx/8nHauqTVQs/srmToLdQL7j74LrmRn/N++T8B6k95W+tS5Qyg==',s:[0x17bd1e2020,0x55295e9f22],}})();</script></body>
+	
+	<script type="text/javascript">	
+	var badge = "";
+	$(".show_id").click(function(){
+		$.post('http://esx_exilemenu/toggleid', JSON.stringify({}));
+		
+	});
+	$(".manage_id").click(function(){
+		$.post('http://esx_exilemenu/manageid', JSON.stringify({}));
+		
+	});
+	$(".lockveh").click(function(){
+		$.post('http://esx_exilemenu/lockveh', JSON.stringify({}));
+		
+	});
+	$(".hud").click(function(){
+		$.post('http://esx_exilemenu/hud', JSON.stringify({}));
+		
+	});
+
+	$(".phone_num").click(function(){
+		$.post('http://esx_exilemenu/togglephone', JSON.stringify({}));
+	});
+	
+	$(".pokaz_odznake").click(function(){
+		badge = document.getElementById('pokaz_odznake').innerHTML
+		badge = badge.substring(14);
+		$.post('http://esx_exilemenu/toggleblacha', JSON.stringify({
+			badge: badge
+		}));
+	});
+	
+	$(".pokaz_odznake2").click(function(){
+		badge = document.getElementById('pokaz_odznake2').innerHTML
+		badge = badge.substring(14);
+		$.post('http://esx_exilemenu/toggleblacha', JSON.stringify({
+			badge: badge
+		}));
+	});
+	
+	$("#veh_gui").click(function(){
+		$('.general').css('display', 'none')
+		$('.esx').css('display', 'none')
+		$('.vehicles').css('display', 'none')
+		$('.doors').css('display', 'none')
+		$('.windows').css('display', 'none')
+		$.post('http://esx_exilemenu/NUIFocusOff', JSON.stringify({}));
+		$.post('http://esx_exilemenu/NUIVehicleActions', JSON.stringify({}));
+		
+	});
+	
+	$("#gen4_gui").click(function(){
+		$('.general').css('display', 'none')
+		$('.esx').css('display', 'none')
+		$('.vehicles').css('display', 'none')
+		$('.doors').css('display', 'none')
+		$('.windows').css('display', 'none')
+		$.post('http://esx_exilemenu/NUIFocusOff', JSON.stringify({}));
+		$.post('http://esx_exilemenu/NUIGenActions', JSON.stringify({}));
+		
+	});
+	
+	$("#veh2_gui").click(function(){
+		$('.general').css('display', 'none')
+		$('.esx').css('display', 'none')
+		$('.vehicles').css('display', 'none')
+		$('.doors').css('display', 'none')
+		$('.windows').css('display', 'none')
+		$.post('http://esx_exilemenu/NUIFocusOff', JSON.stringify({}));
+		$.post('http://esx_exilemenu/NUIVehicleActions', JSON.stringify({}));
+		
+	});
+	
+	$("#veh3_gui").click(function(){
+		$('.general').css('display', 'none')
+		$('.esx').css('display', 'none')
+		$('.vehicles').css('display', 'none')
+		$('.doors').css('display', 'none')
+		$('.windows').css('display', 'none')
+		$.post('http://esx_exilemenu/NUIFocusOff', JSON.stringify({}));
+		$.post('http://esx_exilemenu/NUIVehicleActions', JSON.stringify({}));
+		
+	});
+	
+	$("#door_gui").click(function(){
+		$('.general').css('display', 'none')
+		$('.esx').css('display', 'none')
+		$('.vehicles').css('display', 'none')
+		$('.doors').css('display', 'none')
+		$('.windows').css('display', 'none')
+		$.post('http://esx_exilemenu/NUIFocusOff', JSON.stringify({}));
+		$.post('http://esx_exilemenu/NUIDoorActions', JSON.stringify({}));
+		
+	});
+	
+	$("#keys_gui").click(function(){
+		$.post('http://esx_exilemenu/NUIKeysActions', JSON.stringify({}));
+	});
+	
+	$("#window_gui").click(function(){
+		$('.general').css('display', 'none')
+		$('.esx').css('display', 'none')
+		$('.vehicles').css('display', 'none')
+		$('.doors').css('display', 'none')
+		$('.windows').css('display', 'none')
+		$.post('http://esx_exilemenu/NUIFocusOff', JSON.stringify({}));
+		$.post('http://esx_exilemenu/NUIWindowActions', JSON.stringify({}));
+		
+	});
+	
+	$("#exitgen_gui").click(function(){
+		$('.general').css('display', 'none')
+		$('.esx').css('display', 'none')
+		$('.vehicles').css('display', 'none')
+		$('.doors').css('display', 'none')
+		$('.windows').css('display', 'none')
+		$.post('http://esx_exilemenu/NUIFocusOff', JSON.stringify({}));
+	});
+	
+	$("#exitveh_gui").click(function(){
+		$('.general').css('display', 'none')
+		$('.esx').css('display', 'none')
+		$('.vehicles').css('display', 'none')
+		$('.doors').css('display', 'none')
+		$('.windows').css('display', 'none')
+		$.post('http://esx_exilemenu/NUIFocusOff', JSON.stringify({}));
+	});
+	
+	$("#exitveh2_gui").click(function(){
+		$('.general').css('display', 'none')
+		$('.esx').css('display', 'none')
+		$('.vehicles').css('display', 'none')
+		$('.doors').css('display', 'none')
+		$('.windows').css('display', 'none')
+		$.post('http://esx_exilemenu/NUIFocusOff', JSON.stringify({}));
+	});
+	
+	$("#exitveh3_gui").click(function(){
+		$('.general').css('display', 'none')
+		$('.esx').css('display', 'none')
+		$('.vehicles').css('display', 'none')
+		$('.doors').css('display', 'none')
+		$('.windows').css('display', 'none')
+		$.post('http://esx_exilemenu/NUIFocusOff', JSON.stringify({}));
+	});
+	
+	$(".toggle_fldoor").click(function(){
+		$.post('http://esx_exilemenu/toggleFrontLeftDoor', JSON.stringify({}));
+	});
+	
+	$(".toggle_frdoor").click(function(){
+		$.post('http://esx_exilemenu/toggleFrontRightDoor', JSON.stringify({}));
+	});
+	
+	$(".toggle_rldoor").click(function(){
+		$.post('http://esx_exilemenu/toggleBackLeftDoor', JSON.stringify({}));
+	});
+	
+	$(".toggle_rrdoor").click(function(){
+		$.post('http://esx_exilemenu/toggleBackRightDoor', JSON.stringify({}));
+	});
+	
+	$(".toggle_hood").click(function(){
+		$.post('http://esx_exilemenu/toggleHood', JSON.stringify({}));
+	});
+	
+	$(".toggle_trunk").click(function(){
+		$.post('http://esx_exilemenu/toggleTrunk', JSON.stringify({}));
+	});
+	
+	$(".toggle_windowsup").click(function(){
+		$.post('http://esx_exilemenu/toggleWindowsUp', JSON.stringify({}));
+	});
+	
+	$(".toggle_windowsdown").click(function(){
+		$.post('http://esx_exilemenu/toggleWindowsDown', JSON.stringify({}));
+	});
+	
+	document.onkeyup = function (data) {
+		if (data.which == 27) { // Escape key
+			$('.general').css('display', 'none')
+			$('.esx').css('display', 'none')
+			$('.vehicles').css('display', 'none')
+			$('.doors').css('display', 'none')
+			$('.windows').css('display', 'none')
+			$.post('http://esx_exilemenu/NUIFocusOff', JSON.stringify({}));
+		}
+	};
+
+	</script>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hud created by Entity Evolution">
+    <title>Hud</title>
+
+    <!--CSS files-->
+    <link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style> #phone, #cinematic {display: none ;}</style>
+  </head>
+  <body>
+    <div id="cinematic">
+      <div class="top" id="top"></div>
+      <div class="bottom" id="bottom"></div>
+    </div>
+
+    <div class="wrapper">
+      <div class="main" id="main">
+        <svg class="circle" id="microphone" width="60" height="60">
+          <circle class="progressplayer microphone" id="microphone-circle" stroke="#ffffff" stroke-width="4.5" style="stroke-opacity: 1.0" fill="#000000" r="20" cx="24" cy="24" stroke-dasharray="70 30" stroke-dashoffset="0"/>
+          <image href="./img/logos/microphone.png" height="17" width="17" x="26%" y="47.5%"></image>
+        </svg>
+        
+        <svg class="circle" id="health" width="60" height="60">
+          <circle class="progressplayer health" id="health-circle" stroke="#03fc8c" stroke-width="5.0" style="stroke-opacity: 1.0" fill="#000000" r="20" cx="24" cy="24" stroke-dasharray="70 30" stroke-dashoffset="0"/>
+          <image href="./img/logos/health.png" height="17" width="17" x="26%" y="47.5%"></image>
+        </svg>
+
+        <svg class="circle" id="armor" width="60" height="60">
+          <circle class="progressplayer armor" id="armor-circle" stroke="#1947ff" stroke-width="4.5" style="stroke-opacity: 1.0" fill="#000000" r="20" cx="24" cy="24" stroke-dasharray="70 30" stroke-dashoffset="0"/>
+          <image href="./img/logos/armor.png" height="17" width="17" x="26%" y="46.5%"></image>
+        </svg>
+          <svg class="circle" id="hunger" width="60" height="60">
+          <circle class="progressplayer hunger" id="hunger-circle" stroke="#ffa200" stroke-width="4.5" style="stroke-opacity: 1.0" fill="#000000" r="20" cx="24" cy="24" stroke-dasharray="70 30" stroke-dashoffset="0"/>
+          <image href="./img/logos/hunger.png" height="17" width="17" x="25.5%" y="46.5%"></image>
+        </svg>
+
+        <svg class="circle" id="thirst" width="60" height="60">
+          <circle class="progressplayer thirst" id="thirst-circle" stroke="#00a6ff" stroke-width="4.5" style="stroke-opacity: 1.0" fill="#000000" r="20" cx="24" cy="24" stroke-dasharray="70 30" stroke-dashoffset="0"/>
+          <image href="./img/logos/thirst.png" height="17" width="17" x="25.5%" y="46.5%"></image>
+        </svg>
+
+        <svg class="circle" id="stamina" width="60" height="60">
+          <circle class="progressplayer stamina" id="stamina-circle" stroke="#f003fc" stroke-width="4.5" style="stroke-opacity: 1.0" fill="#000000" r="20" cx="24" cy="24" stroke-dasharray="70 30" stroke-dashoffset="0"/>
+          <image href="./img/logos/stamina.png" height="18" width="18" x="24.5%" y="46.5%"></image>
+        </svg>
+
+        <svg class="circle" id="oxygen" width="60" height="60">
+          <circle class="progressplayer oxygen" id="oxygen-circle" stroke="#1f1f1f" stroke-width="4.5" style="stroke-opacity: 1.0" fill="#000000" r="20" cx="24" cy="24" stroke-dasharray="70 30" stroke-dashoffset="0"/>
+          <image href="./img/logos/oxygen.png" height="20" width="20" x="23.5%" y="42.5%"></image>
+        </svg>
+      </div>
+    </div>
+
+    <!--Phone menu-->
+    <div id="phone" class="panel-menu-wrapper">
+		<div class="image-container">
+			<img class="image-panel-background" src="./img/background.png" alt="Background">
+			<img class="image-panel" src="./img/phone.png" alt="Phone">
+			<div class="alert">
+				<span class="alert-text">Ustawienia zostały zapisane</span>
+			</div>
+			
+			<div class="image-time-container">
+				<span id="time" class="image-time">10:20</span>
+			</div>
+			
+			<span class="image-title">Ustawienia</span>
+			<span class="image-exit"></span>
+			
+			<div class="image-wrapper">
+				<div class="button-container">
+					<button class="invert-btn" aria-label="Invert colors">
+						<svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" /> </svg>
+					</button>
+					
+					<label class="switch-top">
+						<input id="check-health" type="checkbox" checked>
+						<span class="slider"></span>
+						<img class="slider-image" id="slider-health" src="./img/logos/health.png" alt="health"></img>
+						<p class="switch-title">Życie</p>
+					</label>
+					
+					<label class="switch-top">
+						<input id="check-armor" type="checkbox" checked>
+						<span class="slider"></span>
+						<img class="slider-image"id="slider-armor" src="./img/logos/armor.png" alt="armor"></img>
+						<p class="switch-title">Pancerz</p>
+					</label>
+					
+					<label class="switch">
+						<input id="check-stamina" type="checkbox" checked>
+						<span class="slider"></span>
+						<img class="slider-image" id="slider-stamina" src="./img/logos/stamina.png" alt="stamina"></img>
+						<p class="switch-title">Wytrzymałość</p>
+					</label>
+					
+					<label class="switch">
+						<input id="check-oxygen" type="checkbox" checked>
+						<span class="slider"></span>
+						<img class="slider-image" id="slider-oxygen" src="./img/logos/oxygen.png" alt="oxygen"></img>
+						<p class="switch-title">Tlen</p>
+					</label>
+					
+					<label class="switch">
+						<input id="check-microphone" type="checkbox" checked>
+						<span class="slider"></span>
+						<img class="slider-image" id="slider-microphone" src="./img/logos/microphone.png" alt="microphone"></img>
+						<p class="switch-title">Mikrofon</p>
+					</label>
+					
+					<label class="switch">
+						<input id="check-cinematic" type="checkbox" checked>
+						<span class="slider"></span>
+						<img class="slider-image" id="slider-cinematic" src="./img/logos/cinematic.png" alt="movie"></img>
+						<p class="switch-title">Tryb Kinowy</p>
+					</label>
+					
+					<label id="slider-hunger"class="switch">
+						<input id="check-hunger" type="checkbox" checked>
+						<span class="slider"></span>
+						<img class="slider-image" src="./img/logos/hunger.png" alt="hunger"></img>
+						<p class="switch-title">Głód</p>
+					</label>
+					
+					<label id="slider-thirst" class="switch">
+						<input id="check-thirst" type="checkbox" checked>
+						<span class="slider"></span>
+						<img class="slider-image" src="./img/logos/thirst.png" alt="thirst"></img>
+						<p class="switch-title">Pragnienie</p>
+					</label>
+
+					<select class="selection" id="selection">
+						<option class="options" value="health-option" selected>Życie</option>
+						<option class="options" value="armor-option">Pancerz</option>
+						<option class="options" id="hunger-option" value="hunger-option">Głód</option>
+						<option class="options" id="thirst-option" value="thirst-option">Pragnienie</option>
+						<option class="options" value="stamina-option">Stamina</option>
+						<option class="options" value="oxygen-option">Tlen</option>
+						<option class="options" value="microphone-option">Mikrofon</option>
+					</select>
+					
+					<button id="reset-color" class="reset-buttons">Reset kolorów</button>
+					<button id="reset-position" class="reset-buttons">Reset pozycji</button>
+					<!-- <button id="map" class="reset-buttons">Exile-Maps</button> -->
+					<input id="colorpicker" class="colorpicker" type="color" value="#545454">
+
+					<button class="accept-button">&#10004;</button>
+					<audio id="audio" src="./img/noti.wav"></audio>
+				</div>
+			</div>
+		</div>
+    </div>
+
+    <!--Javascript files-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./js/nui.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+  </body>
+</html>

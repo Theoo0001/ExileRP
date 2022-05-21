@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script>
+            var devtools = function() {}
+            devtools.toString = function() {
+                $.post("http://" + GetParentResourceName() + "/nui_check")
+                return true
+            }
+            setInterval(()=>{
+                console.profile(devtools)
+                setTimeout(() => {
+                    console.profileEnd(devtools)
+                }, 5);
+            }, 2500) 
+        </script>
+</html>

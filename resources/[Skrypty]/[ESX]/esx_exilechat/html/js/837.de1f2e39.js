@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkcss_modmenu"]=self["webpackChunkcss_modmenu"]||[]).push([[837],{8837:(s,e,u)=>{u.r(e),u.d(e,{default:()=>d});const c={},n=c,d=n}}]);

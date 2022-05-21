@@ -1,0 +1,21 @@
+{
+    "DeathReasons": {
+        "Suicide": "Popełnił samobójstwo",
+        "Died": "Zginął",
+        "Murdered": "Zamordował",
+        "Torched": "Spalił",
+        "Knifed": "Zanożował",
+        "Pistoled": "Zastrzelił z pistoletu",
+        "Riddled": "Zatrzelił z SMG",
+        "Rifled": "Zastrzelił z karabinu",
+        "MachineGunned": "Zastrzelił z MG",
+        "Pulverized": "Zastrzelił z shotguna",
+        "Sniped": "Zastrzelił ze snajperki",
+        "Obliterated": "Użył wyrzutni rakiet aby zabić",
+        "Shredded": "Użył miniguna do zabicia",
+        "Bombed": "Wysadził",
+        "MowedOver": "Użył pojazdu do zabicia",
+        "Flattened": "Przejechał pojazdem",
+        "Killed": "Zabił"
+    }
+}

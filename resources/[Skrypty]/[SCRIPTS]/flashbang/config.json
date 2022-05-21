@@ -1,0 +1,7 @@
+{
+	"stuntime" : 16,
+	"aftertime" : 8,
+	"range" : 600.0,
+	"damage" : 25,
+	"lethalrange" : 2.0
+}

@@ -1,0 +1,25 @@
+.search-button[data-v-69093a56] {
+  background-color: rgb(12, 122, 245);
+  color: #000;
+  font-weight: 700;
+}
+
+.note-container[data-v-1ceed9f8] {
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: rgba(0, 23, 65, 0.72);
+  -webkit-box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+}
+
+.note-content[data-v-1ceed9f8] {
+  color: #f3f3f3;
+  padding: 0.5rem;
+  border: 1px solid rgb(12, 122, 245);
+  border-radius: 4px;
+}
+
+.note-author[data-v-1ceed9f8] {
+  font-style: italic;
+}
