@@ -45,5 +45,5 @@ Steam Web API Key - https://steamcommunity.com/dev<br>
 FiveM Patreon - https://www.patreon.com/fivem<br>
 
 
-Jeżeli potrzebujesz pomocy - Skontaktuj się poprzez FiveM Network - https://discord.gg/FvNDTrtPKa.<br>
+Jeżeli potrzebujesz pomocy - Skontaktuj się poprzez FiveM Network - https://discord.gg/KFDC2RE<br>
 - Serwer przeznaczony dla Community, Developerów FiveM w celu pomocy Skryptowej/Technicznej!<br>
